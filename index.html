@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layout 1</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background:#fffbea; display:flex; flex-direction:column; align-items:center; gap:20px; padding:40px; }
+    h1 { font-size:48px; font-weight:900; color:#000; margin-bottom:10px; }
+    .pager { display:flex; gap:15px; }
+    .pager a { text-decoration:none; padding:10px 18px; border:2px solid #e0be23; border-radius:8px; color:#6e6224; background:#fff6b7; font-weight:700; }
+    .frame { width:90%; max-width:1200px; height:600px; display:grid; grid-template-areas:"header header" "sidebar subheader" "sidebar content" "sidebar footer"; grid-template-columns:220px 1fr; grid-template-rows:80px 50px 1fr 50px; gap:10px; background:#fff8d6; border:3px solid #e0be23; border-radius:12px; padding:10px; }
+    .box { border-radius:10px; }
+    .header{grid-area:header; background:#fff3a3;}
+    .sidebar{grid-area:sidebar; background:#ffeaa7;}
+    .sub{grid-area:subheader; background:#fff6b7;}
+    .content{grid-area:content; background:#fff3a3;}
+    .footer{grid-area:footer; background:#ffeaa7;}
+  </style>
+</head>
+<body>
+  <h1>Layout 1</h1>
+
+  <div class="pager">
+    <a href="layout3.html">◀ Prev</a>
+    <a href="layout2.html">Next ▶</a>
+  </div>
+
+  <section class="frame">
+    <div class="box header"></div>
+    <div class="box sidebar"></div>
+    <div class="box sub"></div>
+    <div class="box content"></div>
+    <div class="box footer"></div>
+  </section>
+</body>
+</html>
